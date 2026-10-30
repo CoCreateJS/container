@@ -16,6 +16,21 @@
     "bandwidth-metering"
   ],
   "type": "module",
+  "cocreate": {
+    "environment": [
+      "server"
+    ],
+    "interface": {
+      "schemaVersion": 1,
+      "summary": "Hardened V8 isolated execution engine for CoCreate Server. Executes multi-tenant dynamic scripts inside sandboxed worker threads with untamperable host-side bandwidth metering and unified container interfaces.",
+      "source": "src/index.js",
+      "api": {
+        "exports": [
+          "default"
+        ]
+      }
+    }
+  },
   "main": "./src/index.js",
   "publishConfig": {
     "access": "public"
