@@ -211,7 +211,7 @@ yarn add @cocreate/server-container
 
 Release notes, security improvements, execution engine enhancements, and performance optimizations are available on GitHub:
 
-- https://github.com/CoCreate-app/CoCreate-server-container/releases
+- https://github.com/CoCreateJS/CoCreate-server-container/releases
 
 ---
 
@@ -232,11 +232,11 @@ We welcome pull requests for performance improvements, security enhancements, do
 
 Please review the contribution guide before submitting changes:
 
-- https://github.com/CoCreate-app/CoCreate-server-container/blob/master/CONTRIBUTING.md
+- https://github.com/CoCreateJS/CoCreate-server-container/blob/master/CONTRIBUTING.md
 
 To report bugs or request new features, please use GitHub Issues:
 
-- https://github.com/CoCreate-app/CoCreate-server-container/issues
+- https://github.com/CoCreateJS/CoCreate-server-container/issues
 
 ---
 
@@ -248,6 +248,6 @@ To report bugs or request new features, please use GitHub Issues:
 > Questions about sandbox execution, runtime isolation, usage metering, or custom execution environments can be discussed on GitHub Discussions or in the CoCreate Discord community.
 >
 > GitHub Discussions:
-> https://github.com/CoCreate-app/CoCreate-server-container/discussions
+> https://github.com/CoCreateJS/CoCreate-server-container/discussions
 
 `@cocreate/server-container` is open source and funded by CoCreate. CoCreate names and logos are trademarks of CoCreate, LLC.
