@@ -171,7 +171,9 @@ class ServerContainerManager {
     /**
      * Initializes the Host Bridge with server reference.
      * @param {Object} server - Core server context holding crud, ws, and auth handles.
-     */
+ * @private
+ * @environment server
+ */
     init(server) {
         this.serverInstance = server;
         console.log("[server.container] Isolated Execution Engine initialized.");
@@ -181,7 +183,9 @@ class ServerContainerManager {
      * Executes a script inside an isolated V8 container thread with hard resource bounds.
      * @param {Object} data - Unified data object holding script, data params, organization_id, etc.
      * @returns {Promise<Object>} Script execution result + untamperable usage metrics.
-     */
+ * @private
+ * @environment server
+ */
     async send(data = {}) {
         const { 
             script, 
@@ -328,7 +332,9 @@ class ServerContainerManager {
     /**
      * Records container consumption to the platform database ledger via server.crud.send.
      * @param {Object} data - Unified billing payload object.
-     */
+ * @private
+ * @environment server
+ */
     async recordBillingLedger(data) {
         if (!this.serverInstance?.crud?.send) return;
 
@@ -360,3 +366,18 @@ class ServerContainerManager {
 // Export singleton instance matching standard server module patterns
 const serverContainer = new ServerContainerManager();
 export default serverContainer;
+
+/**
+ *
+ * @name default
+ * @kind member
+ * @public
+ * @environment server
+ */
+
+/**
+ * Hardened V8 isolated execution engine for CoCreate Server. Executes multi-tenant dynamic scripts inside sandboxed worker threads with untamperable host-side bandwidth metering and unified container interfaces.
+ *
+ * @module server-container
+ * @environment server
+ */
