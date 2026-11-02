@@ -378,6 +378,6 @@ export default serverContainer;
 /**
  * Hardened V8 isolated execution engine for CoCreate Server. Executes multi-tenant dynamic scripts inside sandboxed worker threads with untamperable host-side bandwidth metering and unified container interfaces.
  *
- * @module server-container
+ * @module container
  * @environment server
  */

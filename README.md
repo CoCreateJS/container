@@ -8,14 +8,14 @@ An isolated V8 execution engine designed to execute dynamic multi-tenant scripts
 
 For full API references, security isolation specifications, execution hooks, and examples, visit the CoCreate Server Container documentation:
 
-https://cocreatejs.com/docs/server-container
+https://cocreatejs.com/docs/container
 
 ---
 
 ## Table of Contents
 
 - [Hardened Two-Layer Execution Engine](#hardened-two-layer-execution-engine)
-- [Why CoCreate Server Container?](#why-cocreate-server-container)
+- [Why CoCreate Server Container?](#why-cocreate-container)
 - [Unified Immutable Runtime Interface](#unified-immutable-runtime-interface)
 - [Untamperable Bandwidth Metering](#untamperable-bandwidth-metering)
 - [Host RPC Delegation & Child Isolate Spawning](#host-rpc-delegation--child-isolate-spawning)
@@ -30,7 +30,7 @@ https://cocreatejs.com/docs/server-container
 
 ## Hardened Two-Layer Execution Engine
 
-Running untrusted, tenant-written code on a shared server presents significant risks, from event loop starvation and memory exhaustion to global scope tampering. `@cocreate/server-container` solves this by strictly separating host control logic from tenant script execution into two distinct architectural layers.
+Running untrusted, tenant-written code on a shared server presents significant risks, from event loop starvation and memory exhaustion to global scope tampering. `@cocreate/container` solves this by strictly separating host control logic from tenant script execution into two distinct architectural layers.
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────────┐
@@ -66,7 +66,7 @@ Traditional containerization solutions such as Docker or full virtual machines i
 
 Conversely, executing user code directly inside the primary Node.js process exposes global variables, unrestricted `process.env` access, and the possibility of blocking the host event loop.
 
-`@cocreate/server-container` bridges this gap using lightweight V8 worker thread isolates.
+`@cocreate/container` bridges this gap using lightweight V8 worker thread isolates.
 
 ### Features
 
@@ -165,7 +165,7 @@ The host validates the tenant context, creates a sibling isolate, executes the r
 Initialize the container engine during server startup.
 
 ```javascript
-import serverContainer from "@cocreate/server-container";
+import serverContainer from "@cocreate/container";
 
 serverContainer.init(server);
 
@@ -196,13 +196,13 @@ console.log(response.usage);
 ### NPM
 
 ```bash
-npm install @cocreate/server-container
+npm install @cocreate/container
 ```
 
 ### Yarn
 
 ```bash
-yarn add @cocreate/server-container
+yarn add @cocreate/container
 ```
 
 ---
@@ -211,7 +211,7 @@ yarn add @cocreate/server-container
 
 Release notes, security improvements, execution engine enhancements, and performance optimizations are available on GitHub:
 
-- https://github.com/CoCreateJS/CoCreate-server-container/releases
+- https://github.com/CoCreateJS/container/releases
 
 ---
 
@@ -232,22 +232,22 @@ We welcome pull requests for performance improvements, security enhancements, do
 
 Please review the contribution guide before submitting changes:
 
-- https://github.com/CoCreateJS/CoCreate-server-container/blob/master/CONTRIBUTING.md
+- https://github.com/CoCreateJS/container/blob/master/CONTRIBUTING.md
 
 To report bugs or request new features, please use GitHub Issues:
 
-- https://github.com/CoCreateJS/CoCreate-server-container/issues
+- https://github.com/CoCreateJS/container/issues
 
 ---
 
 ## About
 
-`@cocreate/server-container` is designed, built, and maintained by the CoCreate Developer Experience Team.
+`@cocreate/container` is designed, built, and maintained by the CoCreate Developer Experience Team.
 
 > [!NOTE]
 > Questions about sandbox execution, runtime isolation, usage metering, or custom execution environments can be discussed on GitHub Discussions or in the CoCreate Discord community.
 >
 > GitHub Discussions:
-> https://github.com/CoCreateJS/CoCreate-server-container/discussions
+> https://github.com/CoCreateJS/container/discussions
 
-`@cocreate/server-container` is open source and funded by CoCreate. CoCreate names and logos are trademarks of CoCreate, LLC.
+`@cocreate/container` is open source and funded by CoCreate. CoCreate names and logos are trademarks of CoCreate, LLC.

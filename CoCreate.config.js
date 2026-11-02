@@ -8,13 +8,13 @@ module.exports = {
             "object": {
                 "_id": "6204253780b409001727b73f",
                 "name": "index.html",
-                "path": "/docs/server-container",
-                "pathname": "/docs/server-container/index.html",
+                "path": "/docs/container",
+                "pathname": "/docs/container/index.html",
                 "src": "{{./docs/index.html}}",
                 "host": [
                     "*"
                 ],
-                "directory": "server-container",
+                "directory": "container",
                 "content-type": "text/html",
                 "public": "true"
             }

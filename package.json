@@ -1,5 +1,5 @@
 {
-  "name": "@cocreate/server-container",
+  "name": "@cocreate/container",
   "version": "1.6.0",
   "description": "Hardened V8 isolated execution engine for CoCreate Server. Executes multi-tenant dynamic scripts inside sandboxed worker threads with untamperable host-side bandwidth metering and unified container interfaces.",
   "keywords": [
@@ -9,7 +9,7 @@
     "sandbox",
     "worker-threads",
     "multi-tenant",
-    "server-container",
+    "container",
     "isolated-execution",
     "dynamic-scripts",
     "secure-sandbox",
@@ -22,14 +22,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cocreatejs/CoCreate-server-container.git"
+    "url": "git+https://github.com/CoCreateJS/container.git"
   },
   "author": "CoCreate LLC",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/CoCreateJS/CoCreate-server-container/issues"
+    "url": "https://github.com/CoCreateJS/container/issues"
   },
-  "homepage": "https://CoCreateJS.com/docs/CoCreate-server-container",
+  "homepage": "https://CoCreateJS.com/docs/container",
   "scripts": {
     "demo": "PORT=5000 node demo/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
